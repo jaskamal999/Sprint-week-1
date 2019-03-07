@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>GUIDED LEARNING</title>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+        body{background-color: lightgreen;}
+        .a {
+            background-color: whitesmoke;
+            color: darkseagreen;
+            font-family: serif;
+            font-weight: bold;
+            font-size: 50pt;
+            margin-top: -8px;
+            text-align: center;
+            width: 100%;
+            padding: 0.5%;
+            text-shadow: 0 0 3px #0000FF, 0 0 5px #000000;
+           }
+        .b{
+            font-size: 20pt;
+            text-align: center;
+        }
+        .c{
+            float: right;
+            width: 40%;
+            height: 50%;
+            margin-right: -08%;
+            margin-top: -7.5%;
+        }
+        .d{
+            float: right;
+            margin-top: 13.5%;
+            margin-right: -2%;
+            width: 2%;
+        }
+    .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+        /*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+    align-content: center;
+    text-align: center;
+    margin-left: 43%;
+    
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: darkcyan;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: darkcyan;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+</style>
+</head>
+<body>
+ <div class="a">GUIDED LEARNING</div>
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="https://en.wikipedia.org/wiki/Organic_farming">Organic Farming</a>
+  <a href="https://en.wikipedia.org/wiki/Crop">Crops</a>
+  <a href="https://www.omicsonline.org/scholarly/modern-farming-technology-journals-articles-ppts-list.php">Advancements</a>
+</div>
+    <div class="b">
+    <h2>Custom Select</h2>
+    </div>
+    
+    <div class="c">
+    <img src="FarmerPlantsSeeds_China_RTS.jpg"></div>
+    
+    <div class="d">
+    <img src="pexels-photo.jpg"></div>
+ 
+    
+<!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
+<div class="custom-select" style="width:200px; text-align: center;">
+  <select>
+    <option value="0">Select crop </option>
+    <option value="1">Cron</option>
+    <option value="2">Cotton</option>
+    <option value="3">Fruit</option>
+    <option value="4">Tree Nuts</option>
+    <option value="5">Rice</option>
+    <option value="6">Soybean and Oil Crops</option>
+    <option value="7">Sugar and Sweeteners</option>
+    <option value="8">Vegetables</option>
+    <option value="9">Pulses</option>
+    <option value="10">Wheat</option>
+  </select>
+</div>
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰ Modern Farming</button>  
+    <h2>Weather</h2>
+  <h2>e-Agriculture</h2>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+    
+    var x, i, j, selElmnt, a, b, c;
+    
+/*look for any elements with the class "custom-select":*/
+x = document.getElementsByClassName("custom-select");
+for (i = 0; i < x.length; i++) {
+  selElmnt = x[i].getElementsByTagName("select")[0];
+    
+  /*for each element, create a new DIV that will act as the selected item:*/
+  a = document.createElement("DIV");
+  a.setAttribute("class", "select-selected");
+  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+  x[i].appendChild(a);
+    
+  /*for each element, create a new DIV that will contain the option list:*/
+  b = document.createElement("DIV");
+  b.setAttribute("class", "select-items select-hide");
+  for (j = 1; j < selElmnt.length; j++) {
+    /*for each option in the original select element,
+    create a new DIV that will act as an option item:*/
+    c = document.createElement("DIV");
+    c.innerHTML = selElmnt.options[j].innerHTML;
+    c.addEventListener("click", function(e) {
+        /*when an item is clicked, update the original select box,
+        and the selected item:*/
+        var y, i, k, s, h;
+        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        h = this.parentNode.previousSibling;
+        for (i = 0; i < s.length; i++) {
+          if (s.options[i].innerHTML == this.innerHTML) {
+            s.selectedIndex = i;
+            h.innerHTML = this.innerHTML;
+            y = this.parentNode.getElementsByClassName("same-as-selected");
+            for (k = 0; k < y.length; k++) {
+              y[k].removeAttribute("class");
+            }
+            this.setAttribute("class", "same-as-selected");
+            break;
+          }
+        }
+        h.click();
+    });
+    b.appendChild(c);
+  }
+  x[i].appendChild(b);
+  a.addEventListener("click", function(e) {
+      /*when the select box is clicked, close any other select boxes,
+      and open/close the current select box:*/
+      e.stopPropagation();
+      closeAllSelect(this);
+      this.nextSibling.classList.toggle("select-hide");
+      this.classList.toggle("select-arrow-active");
+    });
+}
+function closeAllSelect(elmnt) {
+  /*a function that will close all select boxes in the document,
+  except the current select box:*/
+  var x, y, i, arrNo = [];
+  x = document.getElementsByClassName("select-items");
+  y = document.getElementsByClassName("select-selected");
+  for (i = 0; i < y.length; i++) {
+    if (elmnt == y[i]) {
+      arrNo.push(i)
+    } else {
+      y[i].classList.remove("select-arrow-active");
+    }
+  }
+  for (i = 0; i < x.length; i++) {
+    if (arrNo.indexOf(i)) {
+      x[i].classList.add("select-hide");
+    }
+  }
+}
+/*if the user clicks anywhere outside the select box,
+then close all select boxes:*/
+document.addEventListener("click", closeAllSelect);
+</script>
+   
+                 
+    </body>
+</html>
+
+        
