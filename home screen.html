@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+    body{
+        background-image: url(https://images.pexels.com/photos/1458671/pexels-photo-1458671.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        background-repeat: no-repeat;
+        background-size: 1500px 800px;
+    }
+
+
+.navbar {
+  width: 100%;
+  
+     background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */overflow: auto;
+    margin-top: 0px;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+    
+       .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+        
+        
+        .sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  
+  cursor: pointer;
+  width:60px;
+    height:20px;
+    margin-left: 30px;
+    float: left;
+  
+}
+
+.openbtn:hover {
+  background-color: #444;
+;
+}
+
+#main {
+  transition: margin-left .5s;
+  
+    margin-top: 0px;
+
+}
+     #img2{
+            width: 60px;
+            margin-top: -3px;
+            margin-left: -8px;
+            
+          
+           
+        }
+    
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  font-size: 17px;
+}
+
+.container {
+  position: relative;
+  max-width: 400px;
+  margin-top: 10%;
+    margin-left: 10%;
+}
+
+.container img {vertical-align: middle;}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+  
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  font-size: 17px;
+}
+
+.cont {
+  position: relative;
+      
+  max-width:400px;
+    height: 100px;
+  margin-left: 50%;
+}
+    .cont{
+        margin-left: 60%;
+    }
+.cont img {vertical-align: middle;
+    width: 190px;
+    height: 260px;
+    margin-top: -280px;
+    }
+
+.cont .conte {
+  position: absolute;
+  bottom: 100px;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+    
+}
+    #transparent p{
+          position: absolute;
+  margin-top: 0px;
+        transition: .5;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 1350px;
+  padding: 20px;
+        text-align: center;
+        
+
+    }
+    
+    .wrap {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -86px;
+	margin-left: -89px;
+	text-align: center;
+}
+
+a {
+	-webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	display: block;
+	margin: 20px auto;
+	max-width: 180px;
+	text-decoration: none;
+	border-radius: 4px;
+	padding: 20px 30px;
+}
+
+a.button {
+	color: rgba(30, 22, 54, 0.6);
+	box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+}
+
+a.button:hover {
+	color: rgba(255, 255, 255, 0.85);
+	box-shadow: rgba(30, 22, 54, 0.7) 0 0px 0px 40px inset;
+}
+
+a.button2 {
+	color: rgba(30, 22, 54, 0.6);
+	box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+}
+
+a.button2:hover {
+	color: rgba(255, 255, 255, 0.85);
+	box-shadow: rgba(30, 22, 54, 0.7) 0 80px 0px 2px inset;
+}
+
+    
+        
+</style>
+<body >
+   
+
+
+
+<div class="navbar">
+  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="#"><i class="fa fa-fw fa-search"></i> Search</a> 
+  <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+   
+</div>
+        <div id="main">
+    
+    
+    
+ <button class="openbtn" onclick="openNav()"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfNqz1cNBzw3IwAVHQtAqE9IhYPGt90gXNHJhcTHBrCexNgPkx" id="img2"></button>
+          
+    
+  
+   
+</div>
+    <div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="#Recent">Recent</a>
+  <a href="#Starred">Starred</a>
+  <a href="#Offline">Offline</a>
+        <a href="#Bin">Bin</a>
+        <a href="#Notification">Notification</a>
+        <a href="#Settings">Settings</a>
+        <a href="#Help & feedback">Help & Feedback</a>
+        <a href="#Share">Share</a>
+</div>
+	<div class="wrap">
+  		<a href="#" class="button">WATER LOCATOR</a>
+  		<a href="#" class="button2">GUIDED LEARNING</a>
+	</div>
+    
+   
+
+<div class="container">
+   
+        <img src="https://cdn.vox-cdn.com/thumbor/NY98O5pXby1ZtCoPqWo-RnhvAjQ=/0x0:1024x512/1200x800/filters:focal(632x142:794x304)/cdn.vox-cdn.com/uploads/chorus_image/image/62601599/DtQlXnTUwAAtGDu_1.0.jpg" alt="Notebook" style="width:100%;"> 
+  <div class="content">
+    <h1>WATER LOCATOR</h1>
+    <p>go and get the directions</p>
+  </div>
+</div>
+    
+    
+    <div class="cont">
+  <img src="http://buysellgraphic.com/images/graphic_preview/large/study_background_boy_book_stack_icons_multicolored_cartoon_33647.jpg" alt="Notebook" style="width:100%;">
+  <div class="conte">
+    <h1>GUIDED LEARNING</h1>
+    <p>Search for the information over here</p>
+  </div>
+</div>
+
+  
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+    
+    <script>    function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";}
+        
+        function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+        </script>
+ 
+
+</body>
+</html> 
