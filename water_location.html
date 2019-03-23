@@ -1,59 +1,6 @@
 <html>
 <head>
- <style>
-     body{
-         background:url('') center center no-repeat;
-     }
-     
-     button {
-  position: relative;
-  //display:block;
-  height: 45px;
-  width: 150px;
-  margin: 10px 7px;
-  padding: 5px 5px;
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 2px;
-  color: #383736;
-  border: 2px #383736 solid;
-  border-radius: 4px;
-  text-transform: uppercase;
-  outline: 0;
-  overflow:hidden;
-  background: none;
-  z-index: 1;
-  cursor: pointer;
-  transition:         0.08s ease-in;
-  -o-transition:      0.08s ease-in;
-  -ms-transition:     0.08s ease-in;
-  -moz-transition:    0.08s ease-in;
-  -webkit-transition: 0.08s ease-in;
-}
-
-.fill:hover {
-  color: whitesmoke;
-}
-
-.fill:before {
-  content: "";
-  position: absolute;
-  background: #383736;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 100%;
-  z-index: -1;
-  -webkit-transition: top 0.09s ease-in;
-}
-
-.fill:hover:before {
-  top: 0;
-}
-
-    
-</style>  
-
+   
 
 
 
@@ -75,14 +22,14 @@
     <h1>WELCOME TO THE WATER APP</h1>
         <p>Metrotown station</p>
         
-        <button id="nearby" class="fill">nearby</button>
-        <button id="other" class="fill">other</button>
+        <div id="nearby">nearby</div>
+        <div id="other">other</div>
         <p>Surrey Central</p>
-        <button id="nearby1" class="fill">nearby</button>
-        <button id="other1" class="fill">other</button>
+        <div id="nearby1">nearby</div>
+        <div id="other1">other</div>
         <p>King george</p>
-        <button id="nearby2" class="fill">nearby</button>
-        <button id="other2" class="fill">other</button>
+        <div id="nearby2">nearby</div>
+        <div id="other2">other</div>
         
      <script>
         document.getElementById("nearby").addEventListener("click",
