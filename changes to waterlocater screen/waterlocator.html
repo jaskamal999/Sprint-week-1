@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>GUIDED LEARNING</title>
+    <meta charset="utf-8"/>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB_wfVW612S3BVqSVkmANehnSBBjhVWWtg",
+    authDomain: "file1-5809b.firebaseapp.com",
+    databaseURL: "https://file1-5809b.firebaseio.com",
+    projectId: "file1-5809b",
+    storageBucket: "file1-5809b.appspot.com",
+    messagingSenderId: "611835321934"
+  };
+  firebase.initializeApp(config);
+</script>
+    <style type="text/css">
+        
+        body{
+            background-image:url(waterbg.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+          .a {
+            background-color: #0F2C49;
+            color: paleturquoise;
+            font-family: serif;
+            font-weight: bold;
+            font-size: 50pt;
+            margin: 0px;  
+            padding: 0px;
+            text-align: center;
+            width: 100%;
+            text-shadow: 0 0 3px #0000FF, 0 0 5px #000000;
+           }
+        
+        .b{
+            position: absolute;
+            left: 22px;
+            top: 110px;
+            width: 400px;
+            height: auto;            
+        }
+        
+        .c{
+            position: absolute;
+            left: 480px;
+            top: 110px;
+            width: 400px;
+            height: auto;
+        }
+        .d{
+            position: absolute;
+            right: 22px;
+            top: 110px;
+            width: 400px;
+            height: auto; 
+        }
+        
+        .e{
+            position: absolute;
+            top: 420px;
+            left: 160px;
+
+        }
+        .f{
+            float: left;
+            position: absolute;
+            top: 450px;
+            left: 160px;
+
+        }
+        .g{
+            float: left;
+            position: absolute;
+            top: 420px;
+            left: 620px;
+
+        }
+        .h{
+            float: left;
+            position: absolute;
+            top: 450px;
+            left: 625px;
+        }
+        
+        .i{
+            float: left;
+            position: absolute;
+            top: 420px;
+            right: 50px;
+        }
+
+        .j{
+            float: left;
+            position: absolute;
+            top: 450px;
+            right: 50px;
+        }
+        p {
+            background-image: url(grad1.jpg);
+            position: absolute;
+            top: 460px;
+            left: 600px;
+            width: 160px;
+            height: 70px;
+            font-size: 30px;
+            text-align: center;
+            
+        }
+    </style>
+    </head>
+    <body>
+    <div class="a">WATER LOCATOR</div>
+        <img src="metrotown.jpg" class="b">
+        <img src="surreycentre.jpg" class="c">
+        <img src="kinggeorge.jpg" class="d">
+        <button id="nearby" class="e">Nearby Sources</button>
+        <button id="other" class="f">Other Sources</button>
+        <button id="nearby2" class="g">Nearby Sources</button>
+        <button id="other2" class="h">Other Sources</button>
+        <button id="nearby1" class="i">Nearby Sources</button>
+        <button id="other1" class="j">Other Sources</button>
+        <script>
+                  
+        document.getElementById("nearby").addEventListener("click",
+            function(){
+                ShowList("metrotown", "nearby");
+            }
+         );
+            
+        document.getElementById("other").addEventListener("click",
+            function(){
+                ShowList("metrotown","other");
+            }
+         );
+            
+        document.getElementById("nearby2").addEventListener("click",
+            function(){
+                ShowList("surrey central","nearby2");
+            }
+         );
+            
+        document.getElementById("other2").addEventListener("click",
+            function(){
+                ShowList("surrey central","other2");
+            }
+         );
+            
+        document.getElementById("nearby1").addEventListener("click",
+            function(){
+                ShowList("king george","nearby1");
+            }
+         );
+            
+        document.getElementById("other1").addEventListener("click",
+            function(){
+                ShowList("king george","other1");
+            }
+         );
+            
+        function ShowList(location, category){
+          
+             var dbRef = firebase.database().ref(location+"/"+category);
+             var promise =  dbRef.once("value", function(snap){
+                 list=snap.val();
+             });
+                     promise.then(function(){
+                    
+                 DisplayList(list);  //JSON object
+             });
+         
+             function DisplayList(list){
+             console.log(list);
+             for(x in list){
+             var para=document.createElement("p");
+             document.body.appendChild(para);
+             var node = document.createTextNode(x);
+                 para.appendChild(node);
+                }
+            }
+        }
+        </script>
+    </body>
+</html>
+    
